@@ -1,4 +1,7 @@
 @owned by sukish
 
-for any doubt contact through my mail
-backend-<a href="/https://cms-1-1dvw.onrender.com">https://cms-1-1dvw.onrender.com<a>
+for any doubt contact through my mail    
+
+backend - <a href="/https://cms-1-1dvw.onrender.com">https://cms-1-1dvw.onrender.com</a> 
+
+frontend -  <a href="/https://cms-client-mu.vercel.app/login">https://cms-client-mu.vercel.app/login</a>
