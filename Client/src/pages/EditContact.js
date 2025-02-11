@@ -28,7 +28,7 @@ const EditContact = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    const res = await fetch(`http://localhost:8000/api/contact`, {
+    const res = await fetch(`https://cms-server-sigma.vercel.app/api/contact`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -50,7 +50,7 @@ const EditContact = () => {
   useEffect(async () => {
     setLoading(true);
     try {
-      const res = await fetch(`http://localhost:8000/api/contact/${id}`, {
+      const res = await fetch(`https://cms-server-sigma.vercel.app/api/contact/${id}`, {
         method: "GET",
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -89,7 +89,7 @@ const EditContact = () => {
                 name="name"
                 value={userDetails.name}
                 onChange={handleInputChange}
-                placeholder="John Doe"
+                placeholder="joa"
                 required
               />
             </div>
@@ -104,7 +104,7 @@ const EditContact = () => {
                 name="address"
                 value={userDetails.address}
                 onChange={handleInputChange}
-                placeholder="WalkStreet 05, California"
+                placeholder="05 Tiruchi, Tamilnadu"
                 required
               />
             </div>
@@ -119,7 +119,7 @@ const EditContact = () => {
                 name="email"
                 value={userDetails.email}
                 onChange={handleInputChange}
-                placeholder="johndoe@example.com"
+                placeholder="sukish@example.com"
                 required
               />
             </div>
@@ -134,7 +134,7 @@ const EditContact = () => {
                 name="phone"
                 value={userDetails.phone}
                 onChange={handleInputChange}
-                placeholder="+977 987654321"
+                placeholder="+91 9568456848"
                 required
               />
             </div>
