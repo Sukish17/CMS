@@ -1,0 +1,30 @@
+.buha{
+    height: 8vh;
+    width: 90px;
+}
+.nav{
+    height: 10vh;
+    width: 100vw;
+    background-color: black;
+}
+.nav-link{
+    color: white;
+}
+.button{
+    height: 40px;
+    width: 120px;
+    background-color: #f02929;
+    color: white;
+    border: 0px;
+    border-radius: 2px;
+    font-family: "Robato";
+    font-size: 15px;
+}
+.allbg{
+    background-image: url('https://png.pngtree.com/background/20220721/original/pngtree-money-and-finance-finger-photography-picture-image_1696649.jpg');
+    height: 90vh;
+    width: 100vw;
+    background-size: cover;
+    overflow: hidden;
+    margin: 0px;
+}

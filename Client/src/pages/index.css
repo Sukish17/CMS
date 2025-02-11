@@ -1,0 +1,12 @@
+.allbg{
+    background-image: url('https://png.pngtree.com/background/20220721/original/pngtree-money-and-finance-finger-photography-picture-image_1696649.jpg');
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
+    overflow: hidden;
+    margin: 0px;
+}
+.jo{
+    height: 120px;
+    width: 200px;
+}
