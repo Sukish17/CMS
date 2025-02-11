@@ -3,6 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import Spinner from "../components/Spinner";
 import AuthContext from "../context/AuthContext";
 import ToastContext from "../context/ToastContext";
+import { backendApi } from "../config";
 
 const EditContact = () => {
   const { id } = useParams();
@@ -28,7 +29,7 @@ const EditContact = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    const res = await fetch(`https://cms-server-sigma.vercel.app/api/contact`, {
+    const res = await fetch(`${backendApi}/api/contact`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -50,7 +51,7 @@ const EditContact = () => {
   useEffect(async () => {
     setLoading(true);
     try {
-      const res = await fetch(`https://cms-server-sigma.vercel.app/api/contact/${id}`, {
+      const res = await fetch(`${backendApi}/api/contact/${id}`, {
         method: "GET",
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -89,7 +90,7 @@ const EditContact = () => {
                 name="name"
                 value={userDetails.name}
                 onChange={handleInputChange}
-                placeholder="joa"
+                placeholder="John Doe"
                 required
               />
             </div>
@@ -104,7 +105,7 @@ const EditContact = () => {
                 name="address"
                 value={userDetails.address}
                 onChange={handleInputChange}
-                placeholder="05 Tiruchi, Tamilnadu"
+                placeholder="WalkStreet 05, California"
                 required
               />
             </div>
@@ -119,7 +120,7 @@ const EditContact = () => {
                 name="email"
                 value={userDetails.email}
                 onChange={handleInputChange}
-                placeholder="sukish@example.com"
+                placeholder="johndoe@example.com"
                 required
               />
             </div>
@@ -134,7 +135,7 @@ const EditContact = () => {
                 name="phone"
                 value={userDetails.phone}
                 onChange={handleInputChange}
-                placeholder="+91 9568456848"
+                placeholder="+977 987654321"
                 required
               />
             </div>
