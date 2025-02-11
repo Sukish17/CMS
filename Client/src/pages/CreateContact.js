@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import AuthContext from "../context/AuthContext";
 import ToastContext from "../context/ToastContext";
+import { backendApi } from "../config";
 
 const CreateContact = () => {
   const { user } = useContext(AuthContext);
@@ -24,7 +25,7 @@ const CreateContact = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    const res = await fetch(`https://cms-server-sigma.vercel.app/api/contact`, {
+    const res = await fetch(`${backendApi}/api/contact`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
