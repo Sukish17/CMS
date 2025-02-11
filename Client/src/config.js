@@ -1,1 +1,1 @@
-export const backendApi = "http://localhost:8000";
+export const backendApi = "https://cms-server-mocha.vercel.app";
