@@ -3,6 +3,7 @@ import { Modal } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Spinner from "../components/Spinner";
 import ToastContext from "../context/ToastContext";
+import { backendApi } from "../config";
 
 const AllContact = () => {
   const { toast } = useContext(ToastContext);
@@ -16,7 +17,7 @@ const AllContact = () => {
   useEffect(async () => {
     setLoading(true);
     try {
-      const res = await fetch(`https://cms-server-sigma.vercel.app/api/mycontacts`, {
+      const res = await fetch(`${backendApi}/api/mycontacts`, {
         method: "GET",
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -38,7 +39,7 @@ const AllContact = () => {
   const deleteContact = async (id) => {
     if (window.confirm("are you sure you want to delete this contact ?")) {
       try {
-        const res = await fetch(`https://cms-server-sigma.vercel.app/api/delete/${id}`, {
+        const res = await fetch(`${backendApi}/api/delete/${id}`, {
           method: "DELETE",
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
